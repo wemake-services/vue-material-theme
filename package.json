@@ -1,0 +1,69 @@
+{
+  "name": "vue-material-theme",
+  "version": "1.0.0",
+  "description": "Themes mechanism for vue-material-* components",
+  "author": "sobolevn <mail@sobolevn.me>",
+  "private": false,
+  "scripts": {
+    "publish-please": "./node_modules/.bin/publish-please",
+    "ppublish": "npm run build && publish-please guard && npm run publish-please && npm run ghpages",
+    "build": "./node_modules/.bin/webpack --config build/webpack.conf.js",
+    "test:security": "./node_modules/.bin/nsp check",
+    "test": "npm run test:security && npm run lint",
+    "lint": "eslint --ext .js,.vue src test/unit/specs dev"
+  },
+  "files": [
+    "src/",
+    "dist/",
+    "LICENSE.md",
+    "README.md"
+  ],
+  "devDependencies": {
+    "babel-core": "^6.18.0",
+    "babel-eslint": "^7.0.0",
+    "babel-loader": "^6.2.7",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-2": "^6.0.0",
+    "babel-register": "^6.0.0",
+    "babel-runtime": "5",
+    "eslint": "^3.7.1",
+    "eslint-config-standard": "^6.1.0",
+    "eslint-friendly-formatter": "^2.0.5",
+    "eslint-loader": "^1.5.0",
+    "eslint-plugin-html": "^1.3.0",
+    "eslint-plugin-promise": "^3.3.2",
+    "eslint-plugin-standard": "^2.0.1",
+    "function-bind": "^1.0.2",
+    "humane-js": "^3.2.2",
+    "inject-loader": "^2.0.1",
+    "nsp": "^2.6.2",
+    "opn": "^4.0.2",
+    "ora": "^0.3.0",
+    "publish-please": "^2.2.0",
+    "webpack": "^1.13.3",
+    "webpack-node-externals": "^1.5.4"
+  },
+  "main": "dist/vue-material-theme.js",
+  "repository": {
+    "url": "https://github.com/wemake-services/vue-material-theme.git",
+    "type": "git"
+  },
+  "keywords": [
+    "vue",
+    "plugin",
+    "mixin",
+    "theme",
+    "material",
+    "vue-mixin",
+    "vue-plugin",
+    "wemake.services"
+  ],
+  "license": "MIT",
+  "dependencies": {},
+  "optionalDependencies": {
+    "jss": "^5.5.6",
+    "jss-preset-default": "^0.8.0"
+  }
+}
